@@ -1,18 +1,12 @@
 
-var headingContent= document.getElementById("heading-text");
+var showPasswordBtn= document.getElementById("showPasswordBtn");
 
-function ChangeText(){
-   headingContent.textContent="welcome";
+
+showPasswordBtn.onclick=ShowPassword;
+function ShowPassword(){
+    document.getElementById("password").setAttribute('type','text');
 };
 
 
 
 
-document.getElementById("btn").onclick=ChangeText;
-
-
-function changeTheColor(){
-    headingContent.classList.add("heading");
-};
-
-document.getElementById("change-color").onclick=changeTheColor;
