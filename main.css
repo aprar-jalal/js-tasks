@@ -1,0 +1,145 @@
+*{
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.container{
+    width: calc(100% - 80px);
+    margin:auto;
+}
+.row{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+a{
+    text-decoration: none;
+}
+.d-none{
+display: none !important;
+}
+.big-container{
+    height: 700px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap:10px;
+}
+
+.create-form{
+    display: flex;
+    flex-direction: column;
+    width:50%;
+    gap:10px;
+   
+}
+input{
+    height: 40px;
+}
+.loader-contanier{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    position: fixed;
+    width:100%;
+    z-index: 999;
+    background-color: rgba(0,0,0,0.3);
+}
+.loader {
+  --s: 15px;
+  width: calc(var(--s)*2.33);
+  aspect-ratio: 1;
+  display: flex;
+  justify-content: space-between;
+}
+.loader::before,
+.loader::after {
+  content: "";
+  width: var(--s);
+  --_g: no-repeat radial-gradient(farthest-side,#000 94%,#0000);
+  background:
+    var(--_g) top,
+    var(--_g) bottom;
+  background-size: 100% var(--s);
+  transform-origin: 50% calc(100% - var(--s)/2);
+  animation: l30 1s infinite;
+}
+.loader::after {
+  transform-origin: 50% calc(var(--s)/2);
+}
+@keyframes l30 {
+   70%,100% {transform:rotate(-270deg)}
+}
+.text-danger{
+    color:red;
+}
+.header{
+    background-color: #0044d4d4;
+    padding:15px 0;
+}
+.header a {
+    color: #fff;
+}
+.d-flex{
+    display: flex;
+    flex-wrap: wrap;
+}
+.gap-15{
+    gap:15px;
+}
+.gap-10{
+    gap:10px;
+}
+.users{
+    background-color: #f9f9f9;
+    padding:30px 0;
+}
+
+.users table{
+    width: 100%;
+    background-color: #fff;
+    border-collapse: collapse;
+    text-align: center;
+}
+.users thead{
+    background-color: #0044d4d4;
+}
+.users td {
+    border-bottom: 1px solid #ddd;
+    padding:12px 20px;
+}
+.users th {
+    border-bottom: 1px solid #ddd;
+    padding:12px 20px;
+}
+
+.users tbody tr:hover {
+    background-color:#f1f1f1 ;
+}
+
+.btn{
+    border-radius: 5px;
+    padding:10px;
+    background-color: transparent;
+    cursor: pointer;
+}
+.btn:hover{
+    box-shadow: 2.5px 2.5px rgba(0,0,0,0.17);
+}
+.btn-danger{
+ color:rgba(255,0,0,.6);
+  border:2px solid rgba(255,0,0,.6);
+}
+.btn-primary{
+ color:rgba(0,0,255,.6);
+  border:2px solid rgba(0,0,255,.6);
+}
+.btn-success{
+ color:rgba(0,255,0,.9);
+  border:2px solid rgba(0,255,0,.9);
+}
+.justifyContsnt{
+    justify-content: center;
+}
